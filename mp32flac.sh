@@ -8,7 +8,7 @@ done
 
 for INPUT in *.flac
 do
-oggenc -q 6 "$INPUT"
+oggenc -q 4 "$INPUT"
 done
 
 #oggenc -q 6 (-q 1 = very low; -q 10 = very high; -q 6 = VBR192k)

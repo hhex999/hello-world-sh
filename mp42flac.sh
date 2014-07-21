@@ -9,4 +9,7 @@ for i in *.mp4 *.webm *.flv ; do
 ffmpeg -y -i "$i" -vn -sn "${i}.flac"
 done
 
-oggenc -q 4 *.flac
+for i in *.flac ; do
+oggenc -q 4 "$i"
+done
+

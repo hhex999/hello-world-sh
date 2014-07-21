@@ -5,8 +5,10 @@
 #done
 #######################################################################
 #
-mkdir new-jpg; for f in *.png; 
-do convert -quality 85 "$f" "new-jpg/${f%.png}.jpg"; 
+mkdir new-jpg
+
+for f in *.png ; do
+  convert -quality 85 "$f" "new-jpg/${f%.png}.jpg"
 done
 #######################################################################
 #

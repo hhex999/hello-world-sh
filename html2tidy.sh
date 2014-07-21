@@ -3,8 +3,8 @@
 #echo "Enter the full PATH"
 #read DIR
 
-for i in *.htm *.html;
+for i in *.htm *.html
 do
-tidy -config /home/hhex/tidy-html-conf "$i" > "${i}_tidy.html";
-rm "*.html_tidy.html";
+tidy -config ~/tidy-html-conf "$i" > "${i}.tidy.html"
 done
+
