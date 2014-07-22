@@ -97,57 +97,12 @@ sudo python setup.py install
 cd ~/build/python-nbxmpp
 sudo python setup.py uninstall
 
-
-
-
-############################################################
-# НЕ РОБОТАТЬ (пока не нужно)
-############################################################
-# клонируем дерево исходного кода для gajim?
-# переход в директорию сборки
-cd ~/build
-# клонируем gajim в альтернативную директорию gajim-mercurial (на всякий
-# случай во избежание коллизий имен директорий)
-hg clone https://hg.gajim.org/gajim gajim-mercurial
-
-# итак, нам бы сделать архив-бэкап склонированного репозитория
-tar -caf gajim-mercurial.tar.xz gajim-mercurial
-
-cd ~/build/gajim-mercurial
-less ChangeLog
-# и видим такие строчки
-
-#Gajim 0.16 ()
-#
-#  * Improve File transfer support by adding Jingle file transfer
-#  * use external python-nbxmpp library
-############################################################
-# НЕ РОБОТАТЬ (пока не нужно)
-############################################################
-# ну и судя комментариям на том же hg.gajim.org
-# если у нас дерево исходного кода из репозитория Mercurial (hg.gajim.org)
-# а не архив, скачанный с http://gajim.org
-# то мы можем запустить gajim не собирая его прямо из директории с
-# исходным кодом
-~/build/gajim-mercurial/launch.sh -p perfilhg
-# или так
-~/build/gajim-mercurial/launch.sh -p hg
-# судя коментарию :
-# OK. That is also possible but you should avoid mixing the config file.
-#./launch.sh -p hg
-# this creates a config.hg (eg profile hg)
-# -p что-то на конце это вроде указания gajim создавать разные профили
-# конфигов для gajim
-# ....it creates a new profile to avoid interferences between any
-# ....existing profile. muzzol
-############################################################
-# НЕ РОБОТАТЬ (пока не нужно)
-############################################################
-
+# про gajim из mercurial я пока не подготовил howto, да и там чуть
+# разобраться надо бы, так что собирать будем из релизного gajim-0.16-rc2.tar.gz
 
 
 #*********************************************************************
-# отсюда начинается сбока gajim
+# отсюда начинается сбоhка gajim
 # gajim-0.16-rc2.tar.gz
 #*********************************************************************
 
@@ -222,3 +177,45 @@ sudo ldconfig
 # НЕ боимся их читать
 # там в основном должна быть вся информация как собрать пакет и не только
 
+
+############################################################
+# НЕ РОБОТАТЬ (пока не нужно)
+############################################################
+# клонируем дерево исходного кода для gajim?
+# переход в директорию сборки
+cd ~/build
+# клонируем gajim в альтернативную директорию gajim-mercurial (на всякий
+# случай во избежание коллизий имен директорий)
+hg clone https://hg.gajim.org/gajim gajim-mercurial
+
+# итак, нам бы сделать архив-бэкап склонированного репозитория
+tar -caf gajim-mercurial.tar.xz gajim-mercurial
+
+cd ~/build/gajim-mercurial
+less ChangeLog
+# и видим такие строчки
+
+#Gajim 0.16 ()
+#
+#  * Improve File transfer support by adding Jingle file transfer
+#  * use external python-nbxmpp library
+
+# ну и судя комментариям на том же hg.gajim.org
+# если у нас дерево исходного кода из репозитория Mercurial (hg.gajim.org)
+# а не архив, скачанный с http://gajim.org
+# то мы можем запустить gajim не собирая его прямо из директории с
+# исходным кодом
+~/build/gajim-mercurial/launch.sh -p perfilhg
+# или так
+~/build/gajim-mercurial/launch.sh -p hg
+# судя коментарию :
+# OK. That is also possible but you should avoid mixing the config file.
+#./launch.sh -p hg
+# this creates a config.hg (eg profile hg)
+# -p что-то на конце это вроде указания gajim создавать разные профили
+# конфигов для gajim
+# ....it creates a new profile to avoid interferences between any
+# ....existing profile. muzzol
+############################################################
+# НЕ РОБОТАТЬ (пока не нужно)
+############################################################
