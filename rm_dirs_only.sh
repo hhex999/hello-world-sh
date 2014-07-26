@@ -4,8 +4,9 @@ for i in * ; do
   if [ -d "$i"  ] ; then
   rm -rf "$i"
   else
-  ls -l "$i"
+  ls -l
   fi
 done
 
 echo "..........done!"
+
